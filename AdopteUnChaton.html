@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../RESET_CSS.css" />
+    <link rel="stylesheet" href="Stylesheet_chaton.css" />
+    <script type="text/javascript" src="anim_site.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+      integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+      crossorigin=""
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Adopte Un Chaton
+    </title>
+  </head>
+  <div class="flex center-content espacement-haut-fort">
+    <img src="logo_chaton.png" alt="Logo de l'asso" class="resize" />
+  </div>
+  <body>
+    <h1 class="police-title center espacement-haut espacement-bas">
+      Kittens in Dauphine
+    </h1>
+    <h2 class="center espacement-bas white police-title">
+      A true cats house en plein 16ème !
+    </h2>
+
+    <nav class="radius-top espacement-haut espacement-bas">
+      <ul>
+        <li><a class="nav-hover liens-nav police-title" href="#description">Qui sommes-nous ?</a></li>
+        <li><a class="nav-hover liens-nav police-title" href="#chatons">Chatons</a></li>
+        <li><a class="nav-hover liens-nav police-title" href="#adoption">Adoption</a></li>
+        <li><a class="nav-hover liens-nav police-title" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="espacement-haut espacement-bas" id="description">
+      <h2 class="gray police-title">Qui sommes-nous</h2>
+      <div class="underline"></div>
+      <img
+        src="profile pic2.jpg"
+        class="radius-strong sizing-img floatting"
+        alt="ça, c'est moi"
+      />
+      <p class="justify-left espacement-light">
+        Suite à l'émoi provoqué par la découverte d'une portée de chatons dans la cour de Dauphine,
+        nous avons pu pousser pour créer notre association au sein de notre chère université.
+        Le but est simple : prendre en charge des chats abandonnés et proposer à l'adoption des chatons
+        qui rejoindront votre foyer, étudiant ou non.
+        Nous sommes donc tous volontaires, de la L1 au M2, pour nous relayer au quotidien et apporter
+        à nos compagnons le plus d'amour possible. Des membres ponctuels viennent également nous apporter
+        leur aide de temps à autres, attirés par l'envie de passer une après-midi de révision un chaton sur les genoux !
+      </p>
+      <div class="stop-float"></div>
+    </section>
+
+    <section class="espacement-haut espacement-bas" id="chatons">
+      <h2 class="gray police-title">Nos chatons</h2>
+      <div class="underline"></div>
+      <p class="espacement-light justify">
+        Pour le confort de nos locataires, nous ne proposons qu'un nombre
+        restreint de chatons à l'adoption. Si jamais tous les chats ci-dessous
+        sont déjà réservés ou bien s'ils ne vous correspondent pas, pas
+        d'inquiétude ! De nouveaux viendront prendre leur place dans quelques
+        temps, en fonction du rythme des adoptions et des chats recueillis.
+      </p>
+      <div class="colonnage espacement-light">
+        <div>
+          <img
+            class="grande-image espacement-bas"
+            id="image_du_chat"
+            src="chaton8_v2.jpg"
+          />
+        </div>
+        <div class="align-content espacement-gauche div-size">
+          <p id="nom_du_chat" class="sous-titre police-title"></p>
+          <p class="gray police-title">
+            Âge: <span id="age_du_chat" class="espacement-entre"></span>
+          </p>
+          <p id="description_du_chat" class="espacement-entre"></p>
+        </div>
+      </div>
+      <div class="colonnage center-content">
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton8_v2.jpg"
+            alt="Croquettes"
+            id="croquettes"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton7_v2.jpg"
+            alt="Kiki"
+            id="kiki"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton6.png"
+            alt="Vanille"
+            id="vanille"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton5_v2.jpg"
+            alt="Cookie"
+            id="cookie"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton4.jpg"
+            alt="Nénette"
+            id="nenette"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton3.jpg"
+            alt="Moustache"
+            id="moustache"
+          />
+        </div>
+        <div>
+          <img
+            class="miniatures img-hover"
+            onmouseover="imgSurvol(this)"
+            src="chaton2.jpg"
+            alt="Caramel"
+            id="caramel"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="espacement-haut espacement-bas" id="adoption">
+      <h2 class="gray police-title">Comment adopter ?</h2>
+      <div class="underline"></div>
+      <p class="espacement-light">
+        Nous vous demanderons de remplir une fiche de renseignements lors de
+        l’adoption, ainsi que de nous transmettre les justificatifs suivants :
+      </p>
+      <ul class="justifs espacement-light">
+        <li>Une pièce d’identité;</li>
+        <li>Un justificatif de domicile original de moins de 3 mois.</li>
+      </ul>
+      <p class="espacement-haut">
+        Une participation vous sera demandée, afin de couvrir les frais de
+        vétérinaire avancés. Comptez 120€ pour un chaton et un chèque de caution
+        supplémentaire pour la stérilisation si elle n'a pas encore faite.
+      </p>
+    </section>
+
+    <section class="espacement-haut espacement-bas radius-bottom" id="contact">
+      <h2 class="gray police-title">Contact</h2>
+      <div class="underline"></div>
+      <p class="espacement-bas">
+        Pour toute question, n'hésitez pas à passer nous voir ou bien à nous
+        contacter via le formulaire ci-dessous. Nous vous répondrons dans les
+        plus brefs délais !
+      </p>
+      <div class="colonnage">
+        <div id="map"></div>
+        <form class="align-content size-form">
+          <label class="justify" for="username">Votre nom:</label>
+          <input type="text" name="username" />
+          <label class="justify" for="username">Votre adresse email:</label>
+          <input type="text" name="username" />
+          <label class="justify" for="username">Votre message:</label>
+          <input type="textarea" name="username" />
+          <input type="submit" value="Envoyer" class="espacement-entre" />
+        </form>
+      </div>
+    </section>
+    <footer class="footer"></footer>
+  </body>
+</html>
